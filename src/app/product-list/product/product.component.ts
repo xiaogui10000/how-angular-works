@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostBinding } from '@angular/core';
 import { Product } from '../../product.model';
 
 @Component({
@@ -8,9 +8,9 @@ import { Product } from '../../product.model';
 })
 export class ProductComponent implements OnInit {
   @Input() product: Product;
+  @HostBinding('attr.class') cssClass = 'item';
   constructor() {
   }
 
-  ngOnInit() {
-    console.log(this.product);}
+  ngOnInit() {}
 }

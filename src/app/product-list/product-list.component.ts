@@ -9,7 +9,20 @@ import { Product } from '../product.model';
 export class ProductListComponent implements OnInit {
   @Input() productList: Product[];
   @Output() ProductSelected: EventEmitter<Product>;
-  constructor() {}
+  private CurrProduct: Product;
+  constructor() {
+    this.ProductSelected = new EventEmitter<Product>();
+  }
 
+  clicked(product: Product): void {
+    this.CurrProduct = product;
+    this.ProductSelected.emit(product);
+  }
+  isSelected(product: Product): boolean {
+    if (!product || !this.CurrProduct) {
+      return false;
+    }
+    return product.SKU === this.CurrProduct.SKU;
+  }
   ngOnInit() {}
 }

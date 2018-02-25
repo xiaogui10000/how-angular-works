@@ -1,4 +1,4 @@
-.row{
+.row {
   border: 1px black solid;
   width: 500px;
   align-self: center;
@@ -6,4 +6,8 @@
 }
 h3 {
   margin-bottom: 0px !important;
+}
+
+.item {
+  border-color: blueviolet;
 }

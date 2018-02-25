@@ -26,6 +26,5 @@ export class AppComponent {
         130
       ),
     ];
-    console.log(this.products);
   }
 }
