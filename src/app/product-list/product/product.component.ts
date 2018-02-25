@@ -8,7 +8,6 @@ import { Product } from '../../product.model';
 })
 export class ProductComponent implements OnInit {
   @Input() product: Product;
-  @HostBinding('attr.class') cssClass = 'item';
   constructor() {
   }
 

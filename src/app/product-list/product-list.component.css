@@ -4,3 +4,7 @@
   align-items:center;
   margin-top: 50px;
 }
+.selected{
+  display: inline-block;
+  border-top: 5px blueviolet solid;
+}
